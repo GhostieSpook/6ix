@@ -11,5 +11,7 @@ gtts
 dnspython
 image
 
+make sure you have them all downloaded
 
-big time credit to xanthe.#1337 an fweak
+
+big time credit to xanthe.#1337 and fweak
