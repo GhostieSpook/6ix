@@ -1,0 +1,15 @@
+discord.py
+colorama
+numpy
+requests
+aiohttp
+bs4
+pymongo
+selenium
+pyPrivnote
+gtts
+dnspython
+image
+
+
+big time credit to xanthe.#1337 an fweak
