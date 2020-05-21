@@ -1,6 +1,6 @@
 class SELFBOT():
     __linecount__ = 1933
-    __version__ = 2.1
+    __version__ = 3
     
 
 	
@@ -51,6 +51,56 @@ hwid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1
 start_time = datetime.datetime.utcnow()
 loop = asyncio.get_event_loop()
 
+def startprint():
+    if giveaway_sniper == True:
+        giveaway = "Active" 
+    else:
+        giveaway = "Disabled"
+
+    if nitro_sniper == True:
+        nitro = "Active"
+    else:
+        nitro = "Disabled"
+
+    if slotbot_sniper == True:
+        slotbot = "Active"
+    else:
+        slotbot = "Disabled"
+
+    if privnote_sniper == True:
+        privnote = "Active"
+    else:
+        privnote = "Disabled"    
+
+    print(f'''{Fore.RESET}
+
+                      
+
+
+{Fore.RED}                                                 {Fore.WHITE} ██████  {Fore.WHITE} ██{Fore.RED}▓▒{Fore.WHITE} ██   ██{Fore.RED}▒
+{Fore.RED}                                               ▒{Fore.WHITE} ██    {Fore.RED}▒ ▓{Fore.WHITE} ██{Fore.RED}▒▒▒ {Fore.WHITE} █ █{Fore.RED} ▒░
+{Fore.RED}                                               ░ ▓{Fore.WHITE} ██▄{Fore.RED}   ▒{Fore.WHITE} ██{Fore.RED}▒░░  {Fore.WHITE} █{Fore.RED}   ░
+{Fore.RED}                                               ▒     {Fore.WHITE} ██{Fore.RED}▒░{Fore.WHITE} ██{Fore.RED}░ ░ {Fore.WHITE} █ █{Fore.RED} ▒ 
+{Fore.RED}                                               ▒{Fore.WHITE} ██████{Fore.RED}▒▒░{Fore.WHITE} ██{Fore.RED}░▒{Fore.WHITE} ██{Fore.RED}▒ ▒{Fore.WHITE}██{Fore.RED}▒
+{Fore.RED}                                                 ▒ ▒▓▒ ▒ ░░▓  ▒▒ ░ ░▓ ░
+{Fore.RED}                                              ░ ░▒  ░ ░ ▒ ░░░   ░▒ ░
+{Fore.RED}                                               ░  ░  ░   ▒ ░ ░    ░  
+{Fore.RED}                                                   ░   ░   ░    ░  
+                      
+
+                                                  
+                                {Fore.RED}Loggin =>  {Fore.RED}{SIX.user.name}#{SIX.user.discriminator}{Fore.LIGHTYELLOW_EX}  ||{Fore.LIGHTYELLOW_EX}  {Fore.RED}ID => {Fore.RED}{SIX.user.id}   
+                                {Fore.RED}Privnote => {Fore.RED}{privnote}{Fore.LIGHTYELLOW_EX} ||  {Fore.RED}Nitro => {Fore.RED}{nitro} 
+                                {Fore.RED}Giveaway => {Fore.RED}{giveaway}{Fore.LIGHTYELLOW_EX}   ||  {Fore.RED}SlotBot => {Fore.RED}{slotbot}
+                                {Fore.RED}Prefix => {Fore.GREEN}{prefix}{Fore.LIGHTYELLOW_EX}           ||  {Fore.RED}6ix =>{Fore.LIGHTYELLOW_EX} v{SELFBOT.__version__}                                                     
+     '''+Fore.RESET)
+
+def Clear():
+    os.system('cls')
+Clear()
+
+
+
 def Clear():
     os.system('cls')
 Clear()
@@ -76,7 +126,7 @@ def GmailBomber():
     try:
         _smpt.login(username, password)
     except:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
     target = input('Target Gmail: ')
     message = input('Message to send: ')
     counter = eval(input('Ammount of times: '))
@@ -242,17 +292,17 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         return
     elif isinstance(error, commands.CheckFailure):
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}You're missing permission to execute this command"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}You're missing permission to execute this command"+Fore.RESET)
     elif isinstance(error, commands.MissingRequiredArgument):
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Missing arguments: {error}"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Missing arguments: {error}"+Fore.RESET)
     elif isinstance(error, numpy.AxisError):
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Not a valid image"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Not a valid image"+Fore.RESET)
     elif isinstance(error, discord.errors.Forbidden):
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Discord error: {error}"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Discord error: {error}"+Fore.RESET)
     elif "Cannot send an empty message" in error_str:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Couldnt send a empty message"+Fore.RESET)               
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Couldnt send a empty message"+Fore.RESET)               
     else:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{error_str}"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{error_str}"+Fore.RESET)
 
 @SIX.event
 async def on_message_edit(before, after):
@@ -260,31 +310,33 @@ async def on_message_edit(before, after):
 
 @SIX.event
 async def on_message(message):
-    if 'Someone just dropped' in message.content:
-        if message.author.id == 346353957029019648:
-            await message.channel.send('~grab')
-        print(f"finessed: {Fore.GREEN}{message.channel}{Fore.RESET} in ->> {Fore.MAGENTA}{message.guild}{Fore.RESET}")
 
     def GiveawayData():
         print(
-        f"{Fore.WHITE} - CHANNEL: {Fore.GREEN}[{message.channel}]"
-        f"{Fore.WHITE} - SERVER: {Fore.GREEN}[{message.guild}]"   
+        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]"
+        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"   
     +Fore.RESET)
+
+    def SlotBotData():
+        print(
+        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]"
+        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"   
+    +Fore.RESET)  
 
     def NitroData(elapsed, code):
         print(
-        f"{Fore.WHITE} - CHANNEL: {Fore.GREEN}[{message.channel}]" 
-        f"{Fore.WHITE} - SERVER: {Fore.GREEN}[{message.guild}]"
-        f"{Fore.WHITE} - AUTHOR: {Fore.GREEN}[{message.author}]"
-        f"{Fore.WHITE} - SPEED: {Fore.GREEN}[{elapsed}]"
-        f"{Fore.WHITE} - CODE: {Fore.GREEN}{code}"
+        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]" 
+        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"
+        f"\n{Fore.LIGHTGREEN_EX} - AUTHOR: {Fore.RED}[{message.author}]"
+        f"\n{Fore.LIGHTGREEN_EX} - ELAPSED: {Fore.RED}[{elapsed}]"
+        f"\n{Fore.LIGHTGREEN_EX} - CODE: {Fore.RED}{code}"
     +Fore.RESET)
 
     def PrivnoteData(code):
         print(
-        f"{Fore.WHITE} - CHANNEL: {Fore.GREEN}[{message.channel}]" 
-        f"{Fore.WHITE} - SERVER: {Fore.GREEN}[{message.guild}]"
-        f"{Fore.WHITE} - CONTENT: {Fore.GREEN}[The content can be found at Privnote/{code}.txt]"
+        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]" 
+        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"
+        f"\n{Fore.LIGHTGREEN_EX} - CONTENT: {Fore.RED}[The content can be found at Privnote/{code}.txt]"
     +Fore.RESET)        
 
     time = datetime.datetime.now().strftime("%H:%M %p")  
@@ -295,30 +347,47 @@ async def on_message(message):
             token = config.get('token')
                 
             headers = {'Authorization': token}
+    
             r = requests.post(
                 f'https://discordapp.com/api/v6/entitlements/gift-codes/{code}/redeem', 
                 headers=headers,
             ).text
         
             elapsed = datetime.datetime.now() - start
-            elapsed = f'{elapsed.microseconds}'
+            elapsed = f'{elapsed.seconds}.{elapsed.microseconds}'
 
-            if 'This gift was already redeemed -_- what a scam' in r:
+            if 'This gift has been redeemed already.' in r:
                 print(""
-                f"\n{Fore.WHITE}[{time} - Nitro Already Redeemed]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Already Redeemed]"+Fore.RESET)
                 NitroData(elapsed, code)
 
             elif 'subscription_plan' in r:
                 print(""
-                f"\n{Fore.WHITE}[{time} - Nitro Success]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Success]"+Fore.RESET)
                 NitroData(elapsed, code)
 
             elif 'Unknown Gift Code' in r:
                 print(""
-                f"\n{Fore.WHITE}[{time} - Nitro Unknown Gift Code]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Unknown Gift Code]"+Fore.RESET)
                 NitroData(elapsed, code)
         else:
             return
+            
+    if 'Someone just dropped' in message.content:
+        if slotbot_sniper == True:
+            if message.author.id == 346353957029019648:
+                try:
+                    await message.channel.send('~grab')
+                except discord.errors.Forbidden:
+                    print(""
+                    f"\n{Fore.LIGHTGREEN_EX}[{time} - SlotBot Couldnt Grab]"+Fore.RESET)
+                    SlotBotData()                     
+                print(""
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Slotbot Grabbed]"+Fore.RESET)
+                SlotBotData()
+        else:
+            return
+
     if 'GIVEAWAY' in message.content:
         if giveaway_sniper == True:
             if message.author.id == 294882584201003009:
@@ -326,10 +395,10 @@ async def on_message(message):
                     await message.add_reaction("🎉")
                 except discord.errors.Forbidden:
                     print(""
-                    f"\n{Fore.WHITE}[{time} - Giveaway Couldnt React :(]"+Fore.RESET)
+                    f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Couldnt React]"+Fore.RESET)
                     GiveawayData()            
                 print(""
-                f"\n{Fore.WHITE}[{time} - Giveaway Finessed]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Sniped]"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -338,7 +407,7 @@ async def on_message(message):
         if giveaway_sniper == True:
             if message.author.id == 294882584201003009:    
                 print(""
-                f"\n{Fore.WHITE}[{time} - Giveaway Won]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Won]"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -353,7 +422,7 @@ async def on_message(message):
                 print(e)    
             with open(f'Privnote/{code}.txt', 'a+') as f:
                 print(""
-                f"\n{Fore.WHITE}[{time} - Privnote Sniped]"+Fore.RESET)
+                f"\n{Fore.LIGHTGREEN_EX}[{time} - Privnote Sniped]"+Fore.RESET)
                 PrivnoteData(code)
                 f.write(note_text)
         else:
@@ -383,39 +452,9 @@ async def on_connect():
         privnote = "Active"
     else:
         privnote = "Disabled"    
-
-    print(f'''{Fore.RESET}
-                      
-
-
-{Fore.RED}                                                 {Fore.WHITE} ██████  {Fore.WHITE} ██{Fore.RED}▓▒{Fore.WHITE} ██   ██{Fore.RED}▒
-{Fore.RED}                                               ▒{Fore.WHITE} ██    {Fore.RED}▒ ▓{Fore.WHITE} ██{Fore.RED}▒▒▒ {Fore.WHITE} █ █{Fore.RED} ▒░
-{Fore.RED}                                               ░ ▓{Fore.WHITE} ██▄{Fore.RED}   ▒{Fore.WHITE} ██{Fore.RED}▒░░  {Fore.WHITE} █{Fore.RED}   ░
-{Fore.RED}                                               ▒     {Fore.WHITE} ██{Fore.RED}▒░{Fore.WHITE} ██{Fore.RED}░ ░ {Fore.WHITE} █ █{Fore.RED} ▒ 
-{Fore.RED}                                               ▒{Fore.WHITE} ██████{Fore.RED}▒▒░{Fore.WHITE} ██{Fore.RED}░▒{Fore.WHITE} ██{Fore.RED}▒ ▒{Fore.WHITE}██{Fore.RED}▒
-{Fore.RED}                                                 ▒ ▒▓▒ ▒ ░░▓  ▒▒ ░ ░▓ ░
-{Fore.RED}                                              ░ ░▒  ░ ░ ▒ ░░░   ░▒ ░
-{Fore.RED}                                               ░  ░  ░   ▒ ░ ░    ░  
-{Fore.RED}                                                   ░   ░   ░    ░  
-                      
-
-                                                  
-                                {Fore.RED}Loggin =>  {Fore.RED}{SIX.user.name}#{SIX.user.discriminator}{Fore.LIGHTYELLOW_EX}  ||{Fore.LIGHTYELLOW_EX}  {Fore.RED}ID => {Fore.RED}{SIX.user.id}   
-                                {Fore.RED}Privnote => {Fore.RED}{privnote}{Fore.LIGHTYELLOW_EX} ||  {Fore.RED}Nitro => {Fore.RED}{nitro} 
-                                {Fore.RED}Giveaway => {Fore.RED}{giveaway}{Fore.LIGHTYELLOW_EX}   ||  {Fore.RED}SlotBot => {Fore.RED}{slotbot}
-                                {Fore.RED}Prefix => {Fore.GREEN}{prefix}{Fore.LIGHTYELLOW_EX}           ||  {Fore.RED}6ix =>{Fore.LIGHTYELLOW_EX} v{SELFBOT.__version__}                                                     
-    '''+Fore.RESET)
-    ctypes.windll.kernel32.SetConsoleTitleW(f'[6ix Selfbot v{SELFBOT.__version__}] | Logged in as {SIX.user.name}')
-    headers = {
-      'Authorization': token,
-      'Content-Type': 'application/json',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.305 Chrome/69.0.3497.128 Electron/4.0.8 Safari/537.36'
-    }
-    r = requests.post('https://discordapp.com/api/v6/invite/4jTxrpT', headers=headers)
-    if r.status_code == 200:
-        return True
-    else:
-        return False
+    
+    startprint()
+    ctypes.windll.kernel32.SetConsoleTitleW(f'[SIX Selfbot v{SELFBOT.__version__}] | Logged in as {SIX.user.name}')
 
 @SIX.command()
 async def clear(ctx):
@@ -735,7 +774,7 @@ async def wizzing(ctx):
 async def bitly(ctx, *, link):
     await ctx.message.delete()
     if bitly_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Bitly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Bitly API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             async with aiohttp.ClientSession() as session:
@@ -747,15 +786,15 @@ async def bitly(ctx, *, link):
             em.add_field(name='Shortened link', value=new, inline=False)
             await ctx.send(embed=em)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
 
 @SIX.command()
 async def cuttly(ctx, *, link):
     await ctx.message.delete()
     if cuttly_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Cutt.ly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Cutt.ly API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f'https://cutt.ly/api/api.php?key={cuttly_key}&short={link}')
@@ -768,15 +807,15 @@ async def cuttly(ctx, *, link):
             except:
                 await ctx.send(new)    
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
 
 @SIX.command() 
 async def cat(ctx):
     await ctx.message.delete()
     if cat_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Cat API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Cat API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f"fhttps://api.thecatapi.com/v1/images/search?format=json&x-api-key={cat_key}")
@@ -788,9 +827,9 @@ async def cat(ctx):
             except:
                 await ctx.send(str(r[0]["url"]))
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
 
 @SIX.command()
 async def dog(ctx):
@@ -886,7 +925,7 @@ async def pingweb(ctx, website = None):
         try:
             r = requests.get(website).status_code
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
         if r == 404:
             await ctx.send(f'Site is down, responded with a status code of {r}', delete_after=3)
         else:
@@ -911,7 +950,7 @@ async def revav(ctx, user: discord.Member=None):
         em = discord.Embed(description=f"https://images.google.com/searchbyimage?image_url={user.avatar_url}")
         await ctx.send(embed=em)
     except Exception as e:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['pfp', 'avatar'])
 async def av(ctx, *, user: discord.Member=None):
@@ -1012,7 +1051,7 @@ async def blank(ctx):
           try:      
              await SIX.user.edit(password=password, username="ٴٴٴٴ", avatar=f.read())
           except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['pfpget', 'stealpfp'])
 async def pfpsteal(ctx, user: discord.Member):
@@ -1032,7 +1071,7 @@ async def pfpsteal(ctx, user: discord.Member):
             with open('Images/Avatars/Stolen/Stolen.png', 'rb') as f:
               await SIX.user.edit(password=password, avatar=f.read())
         except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(name='set-pfp', aliases=['setpfp', 'pfpset'])
 async def _set_pfp(ctx, *, url):
@@ -1052,7 +1091,7 @@ async def _set_pfp(ctx, *, url):
         with open('Images/Avatars/PFP-1.png', 'rb') as f:
             await SIX.user.edit(password=password, avatar=f.read())
     except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['dong', 'penis', 'pp'])
 async def dick(ctx, *, user: discord.Member = None):
@@ -1087,7 +1126,7 @@ async def hypesquad(ctx, house):
     try:
         request.post('https://discordapp.com/api/v6/hypesquad/online', headers=headers, json=payload, timeout=10)
     except Exception as e:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['tokenfucker', 'disable', 'crash']) 
 async def tokenfuck(ctx, _token): 
@@ -1125,7 +1164,7 @@ async def tokenfuck(ctx, _token):
         try:
             request.patch("https://canary.discordapp.com/api/v6/users/@me/settings",headers=headers, json=payload)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
         else:
             break
     modes = cycle(["light", "dark"])
@@ -1139,7 +1178,7 @@ async def tokenfuck(ctx, _token):
             try:
                 request.patch("https://canary.discordapp.com/api/v6/users/@me/settings",headers=headers, json=setting, timeout=10)
             except Exception as e:
-                print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+                print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
             else:
                 break   
 
@@ -1223,7 +1262,7 @@ async def tokeninfo(ctx, _token):
         avatar_id = res['avatar']
         creation_date = datetime.datetime.utcfromtimestamp(((int(user_id) >> 22) + 1420070400000) / 1000).strftime('%d-%m-%Y %H:%M:%S UTC') 
     except KeyError:
-        print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}Invalid token"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Invalid token"+Fore.RESET)
     em = discord.Embed(
         description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})", colour = discord.Colour.rand())
     fields = [
@@ -1292,56 +1331,10 @@ async def six(ctx):
     except:
         pass                 
     for _i in range(500):
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name=" Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
-        await ctx.guild.create_text_channel(name="Pix Wizzed")
-        await ctx.guild.create_voice_channel(name="Pix Wizzed")
-        await ctx.guild.create_category(name="Pix Wizzed")
+        await ctx.guild.create_text_channel(name=RandString())
+        await ctx.guild.create_category(name=RandString())
+        await ctx.guild.create_voice_channel(name=RandString())
+
 
 
 @SIX.command()
@@ -1528,7 +1521,7 @@ async def _auto_bump(ctx, channelid):
             print(f'{Fore.BLUE}[AUTO-BUMP] {Fore.GREEN}Bump number: {count} sent'+Fore.RESET)
             await asyncio.sleep(7200)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}oops >>{Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command()
 async def tts(ctx, *, message):
