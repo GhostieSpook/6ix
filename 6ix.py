@@ -100,22 +100,17 @@ def Clear():
 Clear()
 
 
-
-def Clear():
-    os.system('cls')
-Clear()
-
 def Init():
     if config.get('token') == "token-here":
         Clear()
-        print(f"{Fore.RED}[ERROR] {Fore.CYAN}You didnt put your token in the config.json file"+Fore.RESET)
+        print(f"{Fore.LIGHTYELLOW_EX}[ERROR] {Fore.RED}You didnt put your token in the config.json file"+Fore.RESET)
     else:
         token = config.get('token')
         try:
             SIX.run(token, bot=False, reconnect=True)
             os.system(f'title (6ix Selfbot) - Version {SELFBOT.__version__}')
         except discord.errors.LoginFailure:
-            print(f"{Fore.RED}[ERROR] {Fore.CYAN}this token ain't workin my guy"+Fore.RESET)
+            print(f"{Fore.LIGHTYELLOW_EX}[ERROR] {Fore.RED}this token ain't workin my guy"+Fore.RESET)
             os.system('pause >NUL')
 
 def GmailBomber():
@@ -126,7 +121,7 @@ def GmailBomber():
     try:
         _smpt.login(username, password)
     except:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
+        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.RED} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
     target = input('Target Gmail: ')
     message = input('Message to send: ')
     counter = eval(input('Ammount of times: '))
@@ -292,17 +287,17 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         return
     elif isinstance(error, commands.CheckFailure):
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}You're missing permission to execute this command"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}You're missing permission to execute this command"+Fore.RESET)
     elif isinstance(error, commands.MissingRequiredArgument):
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Missing arguments: {error}"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Missing arguments: {error}"+Fore.RESET)
     elif isinstance(error, numpy.AxisError):
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Not a valid image"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Not a valid image"+Fore.RESET)
     elif isinstance(error, discord.errors.Forbidden):
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Discord error: {error}"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Discord error: {error}"+Fore.RESET)
     elif "Cannot send an empty message" in error_str:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Couldnt send a empty message"+Fore.RESET)               
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Couldnt send a empty message"+Fore.RESET)               
     else:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{error_str}"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{error_str}"+Fore.RESET)
 
 @SIX.event
 async def on_message_edit(before, after):
@@ -313,30 +308,30 @@ async def on_message(message):
 
     def GiveawayData():
         print(
-        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]"
-        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"   
+        f"{Fore.RED} channel: {Fore.LIGHTYELLOW_EX}{message.channel}"
+        f"{Fore.RED} server: {Fore.LIGHTYELLOW_EX}{message.guild}"   
     +Fore.RESET)
 
     def SlotBotData():
         print(
-        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]"
-        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"   
+        f"{Fore.RED} channel: {Fore.LIGHTYELLOW_EX}{message.channel}"
+        f"{Fore.RED} server: {Fore.LIGHTYELLOW_EX}{message.guild}"   
     +Fore.RESET)  
 
     def NitroData(elapsed, code):
         print(
-        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]" 
-        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"
-        f"\n{Fore.LIGHTGREEN_EX} - AUTHOR: {Fore.RED}[{message.author}]"
-        f"\n{Fore.LIGHTGREEN_EX} - ELAPSED: {Fore.RED}[{elapsed}]"
-        f"\n{Fore.LIGHTGREEN_EX} - CODE: {Fore.RED}{code}"
+        f"{Fore.RED}channel: {Fore.LIGHTYELLOW_EX}{message.channel}" 
+        f"{Fore.RED}  server: {Fore.LIGHTYELLOW_EX}{message.guild}"
+        f"{Fore.RED}  sender: {Fore.LIGHTYELLOW_EX}{message.author}"
+        f"\n{Fore.RED}speed: {Fore.LIGHTYELLOW_EX}{elapsed}"
+        f"{Fore.RED} nitro: {Fore.LIGHTYELLOW_EX}https://discord.gift/{code}"
     +Fore.RESET)
 
     def PrivnoteData(code):
         print(
-        f"{Fore.LIGHTGREEN_EX} - CHANNEL: {Fore.RED}[{message.channel}]" 
-        f"\n{Fore.LIGHTGREEN_EX} - SERVER: {Fore.RED}[{message.guild}]"
-        f"\n{Fore.LIGHTGREEN_EX} - CONTENT: {Fore.RED}[The content can be found at Privnote/{code}.txt]"
+        f"{Fore.RED} channel: {Fore.LIGHTYELLOW_EX}{message.channel}" 
+        f"{Fore.RED} server: {Fore.LIGHTYELLOW_EX}{message.guild}"
+        f"\n{Fore.RED} message: {Fore.LIGHTYELLOW_EX}[The content can be found at Privnote/{code}.txt]"
     +Fore.RESET)        
 
     time = datetime.datetime.now().strftime("%H:%M %p")  
@@ -358,17 +353,17 @@ async def on_message(message):
 
             if 'This gift has been redeemed already.' in r:
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Already Redeemed]"+Fore.RESET)
+                f"{Fore.RED}it has already been redeemed dropped at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 NitroData(elapsed, code)
 
             elif 'subscription_plan' in r:
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Success]"+Fore.RESET)
+                f"{Fore.RED}{time}Nitro grabbed at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 NitroData(elapsed, code)
 
             elif 'Unknown Gift Code' in r:
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Nitro Unknown Gift Code]"+Fore.RESET)
+                f"{Fore.RED}Nitro code has been dropped at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 NitroData(elapsed, code)
         else:
             return
@@ -380,10 +375,10 @@ async def on_message(message):
                     await message.channel.send('~grab')
                 except discord.errors.Forbidden:
                     print(""
-                    f"\n{Fore.LIGHTGREEN_EX}[{time} - SlotBot Couldnt Grab]"+Fore.RESET)
+                    f"\n{Fore.RED}{time}Unable to grab at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                     SlotBotData()                     
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Slotbot Grabbed]"+Fore.RESET)
+                f"\n{Fore.RED}{time}You grabbed it at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 SlotBotData()
         else:
             return
@@ -395,10 +390,10 @@ async def on_message(message):
                     await message.add_reaction("🎉")
                 except discord.errors.Forbidden:
                     print(""
-                    f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Couldnt React]"+Fore.RESET)
+                    f"{Fore.RED}{time}Unable to react at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                     GiveawayData()            
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Sniped]"+Fore.RESET)
+                f"{Fore.RED}{time}You reacted to it at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -407,7 +402,7 @@ async def on_message(message):
         if giveaway_sniper == True:
             if message.author.id == 294882584201003009:    
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Giveaway Won]"+Fore.RESET)
+                f"{Fore.RED}{time}You won the giveaway at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -422,7 +417,7 @@ async def on_message(message):
                 print(e)    
             with open(f'Privnote/{code}.txt', 'a+') as f:
                 print(""
-                f"\n{Fore.LIGHTGREEN_EX}[{time} - Privnote Sniped]"+Fore.RESET)
+                f"\n{Fore.RED}Privnote grabbed at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 PrivnoteData(code)
                 f.write(note_text)
         else:
