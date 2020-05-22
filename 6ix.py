@@ -358,7 +358,7 @@ async def on_message(message):
 
             elif 'subscription_plan' in r:
                 print(""
-                f"{Fore.RED}{time}Nitro grabbed at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                f"{Fore.RED}Nitro grabbed at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 NitroData(elapsed, code)
 
             elif 'Unknown Gift Code' in r:
@@ -375,10 +375,10 @@ async def on_message(message):
                     await message.channel.send('~grab')
                 except discord.errors.Forbidden:
                     print(""
-                    f"\n{Fore.RED}{time}Unable to grab at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                    f"\n{Fore.RED}was unable to grab slotbot at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                     SlotBotData()                     
                 print(""
-                f"\n{Fore.RED}{time}You grabbed it at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                f"\n{Fore.RED}You grabbed slotbot at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 SlotBotData()
         else:
             return
@@ -598,9 +598,9 @@ async def help(ctx):
     em.add_field(name="`𝐅𝐔𝐍`",value="𝐟𝐮𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬",inline=False)
     em.add_field(name="`𝐇𝐀𝐂𝐊𝐈𝐍𝐆`",value="𝐨𝐛𝐯 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐝𝐮𝐡 -_-",inline=False)   
     em.add_field(name="`𝐖𝐈𝐙𝐙𝐈𝐍𝐆`",value="𝐟𝐨𝐫 𝐫𝐚𝐩𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐞𝐫𝐬",inline=False)   
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def cmd(ctx):
@@ -640,9 +640,9 @@ async def cmd(ctx):
     em.add_field(name="`𝐮𝐩𝐩𝐞𝐫`",value="Make your message CAPS",inline=False)
     em.add_field(name="`𝐈𝐦𝐠𝐭𝐟𝐲`",value="Use lmgtfy search engine to look-up something",inline=False)
     em.add_field(name="`𝐠𝐞𝐧𝐧𝐚𝐦𝐞`",value="Generate a random name based on the server members",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def gifs(ctx):
@@ -662,9 +662,9 @@ async def gifs(ctx):
     em.add_field(name="`smug`",value="kinda weird I don't use it personally.",inline=False)
     em.add_field(name="`pat`",value="Pat em cuz dey good",inline=False)
     em.add_field(name="`kiss`",value="issa kith duh..",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -684,9 +684,9 @@ async def amc(ctx):
     em.add_field(name="`setL`",value="add a listening status",inline=False)
     em.add_field(name="`setW`",value="add a status",inline=False)
     em.add_field(name="`masscon`",value="Add a big amount of connections to your profile ie: !masscon skype 5 6IX",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -704,9 +704,9 @@ async def fun(ctx):
     em.add_field(name="`slot`",value="Play slot machine in the discord chat",inline=False)
     em.add_field(name="`topic`",value="Start a random topic to keep the chat going",inline=False)
     em.add_field(name="`wyr`",value="Start a 'what would you rather' topic in the chat",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def util(ctx):
@@ -723,9 +723,9 @@ async def util(ctx):
     em.add_field(name="`decode`",value="Decode a string from base64 to regular text",inline=False)
     em.add_field(name="`eth`",value="Display current Ethereum price",inline=False)
     em.add_field(name="`btc`",value="Display current Bitcoin price",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def hacking(ctx):
@@ -741,9 +741,9 @@ async def hacking(ctx):
     em.add_field(name="`masslogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`login`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`botlogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def wizzing(ctx):
@@ -759,9 +759,9 @@ async def wizzing(ctx):
     em.add_field(name="`𝐝𝐞𝐥𝐑`",value="Delete all the roles",inline=False)
     em.add_field(name="`𝐝𝐞𝐥𝐂`",value="Delete all the channels",inline=False)
     em.add_field(name="`𝐦𝐚𝐬𝐬𝐔𝐧`",value="Unban every member",inline=False)
-    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/708046346371858484/image4.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
     await ctx.send(embed=em)
 
 
