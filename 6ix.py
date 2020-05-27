@@ -948,18 +948,12 @@ async def revav(ctx, user: discord.Member=None):
         print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['pfp', 'avatar'])
-async def av(ctx, *, user: discord.Member=None):
+async def av(ctx, *, user: discord.Member = None):
     await ctx.message.delete()
-    format = "gif"
-    user = user or ctx.author
-    if user.is_avatar_animated() != True:
-	    format = "png"
-    avatar = user.avatar_url_as(format = format if format != "gif" else None)
-    async with aiohttp.ClientSession() as session:
-        async with session.get(str(avatar)) as resp:
-            image = await resp.read()
-    with io.BytesIO(image) as file:
-        await ctx.send(file = discord.File(file, f"Avatar.{format}"))      
+    em = discord.Embed(author=user.mention, colour = discord.Colour.rand())
+    em.set_author(name=str(user)+"'s pfp")
+    em.set_image(url=user.avatar_url)
+    await ctx.send(embed=em)     
 
 @SIX.command(aliases=['ri', 'role'])
 async def roleinfo(ctx, *, role: discord.Role):
