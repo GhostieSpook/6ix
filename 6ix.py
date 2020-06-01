@@ -121,7 +121,7 @@ def GmailBomber():
     try:
         _smpt.login(username, password)
     except:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.RED} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.RED} Incorrect Password or gmail, make sure you've enabled less-secure apps access"+Fore.RESET)
     target = input('Target Gmail: ')
     message = input('Message to send: ')
     counter = eval(input('Ammount of times: '))
@@ -390,10 +390,10 @@ async def on_message(message):
                     await message.add_reaction("🎉")
                 except discord.errors.Forbidden:
                     print(""
-                    f"{Fore.RED}{time}Unable to react at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                    f"{Fore.RED}Unable to react at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                     GiveawayData()            
                 print(""
-                f"{Fore.RED}{time}You reacted to it at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                f"{Fore.RED}You reacted to it at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -402,7 +402,7 @@ async def on_message(message):
         if giveaway_sniper == True:
             if message.author.id == 294882584201003009:    
                 print(""
-                f"{Fore.RED}{time}You won the giveaway at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
+                f"{Fore.RED}You won the giveaway at{Fore.LIGHTYELLOW_EX} {time}"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -598,9 +598,9 @@ async def help(ctx):
     em.add_field(name="`𝐅𝐔𝐍`",value="𝐟𝐮𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬",inline=False)
     em.add_field(name="`𝐇𝐀𝐂𝐊𝐈𝐍𝐆`",value="𝐨𝐛𝐯 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐝𝐮𝐡 -_-",inline=False)   
     em.add_field(name="`𝐖𝐈𝐙𝐙𝐈𝐍𝐆`",value="𝐟𝐨𝐫 𝐫𝐚𝐩𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐞𝐫𝐬",inline=False)   
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def cmd(ctx):
@@ -640,9 +640,9 @@ async def cmd(ctx):
     em.add_field(name="`𝐮𝐩𝐩𝐞𝐫`",value="Make your message CAPS",inline=False)
     em.add_field(name="`𝐈𝐦𝐠𝐭𝐟𝐲`",value="Use lmgtfy search engine to look-up something",inline=False)
     em.add_field(name="`𝐠𝐞𝐧𝐧𝐚𝐦𝐞`",value="Generate a random name based on the server members",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def gifs(ctx):
@@ -662,9 +662,9 @@ async def gifs(ctx):
     em.add_field(name="`smug`",value="kinda weird I don't use it personally.",inline=False)
     em.add_field(name="`pat`",value="Pat em cuz dey good",inline=False)
     em.add_field(name="`kiss`",value="issa kith duh..",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -680,13 +680,13 @@ async def amc(ctx):
     em.add_field(name="`fakenet`",value="Allows you to spoof connections in your profile (ie: !fakenet skype 6ix)",inline=False)
     em.add_field(name="`steal-all-pfp`",value="ion gotta explain -_-",inline=False)
     em.add_field(name="`𝐬etS`",value="add a stream status",inline=False)
-    em.add_field(name="`setG`",value="add a watching status",inline=False)
+    em.add_field(name="`setG`",value="add a playing status",inline=False)
     em.add_field(name="`setL`",value="add a listening status",inline=False)
-    em.add_field(name="`setW`",value="add a status",inline=False)
+    em.add_field(name="`setW`",value="add a watching status",inline=False)
     em.add_field(name="`masscon`",value="Add a big amount of connections to your profile ie: !masscon skype 5 6IX",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -704,9 +704,9 @@ async def fun(ctx):
     em.add_field(name="`slot`",value="Play slot machine in the discord chat",inline=False)
     em.add_field(name="`topic`",value="Start a random topic to keep the chat going",inline=False)
     em.add_field(name="`wyr`",value="Start a 'what would you rather' topic in the chat",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def util(ctx):
@@ -723,9 +723,9 @@ async def util(ctx):
     em.add_field(name="`decode`",value="Decode a string from base64 to regular text",inline=False)
     em.add_field(name="`eth`",value="Display current Ethereum price",inline=False)
     em.add_field(name="`btc`",value="Display current Bitcoin price",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def hacking(ctx):
@@ -741,9 +741,9 @@ async def hacking(ctx):
     em.add_field(name="`masslogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`login`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`botlogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def wizzing(ctx):
@@ -759,9 +759,9 @@ async def wizzing(ctx):
     em.add_field(name="`𝐝𝐞𝐥𝐑`",value="Delete all the roles",inline=False)
     em.add_field(name="`𝐝𝐞𝐥𝐂`",value="Delete all the channels",inline=False)
     em.add_field(name="`𝐦𝐚𝐬𝐬𝐔𝐧`",value="Unban every member",inline=False)
-    em.set_image(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/elJuoZK30gPLgwz77Y/giphy.gif")
+    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
 
 
@@ -769,7 +769,7 @@ async def wizzing(ctx):
 async def bitly(ctx, *, link):
     await ctx.message.delete()
     if bitly_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Bitly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Bitly API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             async with aiohttp.ClientSession() as session:
@@ -781,15 +781,15 @@ async def bitly(ctx, *, link):
             em.add_field(name='Shortened link', value=new, inline=False)
             await ctx.send(embed=em)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{req.text}"+Fore.RESET)
 
 @SIX.command()
 async def cuttly(ctx, *, link):
     await ctx.message.delete()
     if cuttly_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Cutt.ly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Cutt.ly API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f'https://cutt.ly/api/api.php?key={cuttly_key}&short={link}')
@@ -802,15 +802,15 @@ async def cuttly(ctx, *, link):
             except:
                 await ctx.send(new)    
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{req.text}"+Fore.RESET)
 
 @SIX.command() 
 async def cat(ctx):
     await ctx.message.delete()
     if cat_key == '':
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Cat API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Cat API key has not been set in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f"fhttps://api.thecatapi.com/v1/images/search?format=json&x-api-key={cat_key}")
@@ -822,9 +822,9 @@ async def cat(ctx):
             except:
                 await ctx.send(str(r[0]["url"]))
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
         else:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{req.text}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{req.text}"+Fore.RESET)
 
 @SIX.command()
 async def dog(ctx):
@@ -920,7 +920,7 @@ async def pingweb(ctx, website = None):
         try:
             r = requests.get(website).status_code
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
         if r == 404:
             await ctx.send(f'Site is down, responded with a status code of {r}', delete_after=3)
         else:
@@ -945,7 +945,7 @@ async def revav(ctx, user: discord.Member=None):
         em = discord.Embed(description=f"https://images.google.com/searchbyimage?image_url={user.avatar_url}")
         await ctx.send(embed=em)
     except Exception as e:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['pfp', 'avatar'])
 async def av(ctx, *, user: discord.Member = None):
@@ -953,7 +953,8 @@ async def av(ctx, *, user: discord.Member = None):
     em = discord.Embed(author=user.mention, colour = discord.Colour.rand())
     em.set_author(name=str(user)+"'s pfp")
     em.set_image(url=user.avatar_url)
-    await ctx.send(embed=em)     
+    await ctx.send(embed=em)
+    
 
 @SIX.command(aliases=['ri', 'role'])
 async def roleinfo(ctx, *, role: discord.Role):
@@ -962,7 +963,7 @@ async def roleinfo(ctx, *, role: discord.Role):
     since_created = (ctx.message.created_at - role.created_at).days
     role_created = role.created_at.strftime("%d %b %Y %H:%M")
     created_on = "{} ({} days ago)".format(role_created, since_created)
-    users = len([x for x in guild.members if role in x.roles])
+    users = len([x for x in guild   .members if role in x.roles])
     if str(role.colour) == "#000000":
         colour = "default"
         color = ("#%06x" % random.randint(0, 0xFFFFFF))
@@ -1033,20 +1034,20 @@ async def devowel(ctx, *, text):
 async def blank(ctx):
     await ctx.message.delete()
     if config.get('password') == 'password-here':
-        print(f"{Fore.RED}[ERROR] {Fore.CYAN}You didnt put your password in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR] LIGHTYELLOW_EXYou didnt put your password in the config.json file"+Fore.RESET)
     else:  
         password = config.get('password')
         with open('Images/Avatars/Transparent.png', 'rb') as f:
           try:      
              await SIX.user.edit(password=password, username="ٴٴٴٴ", avatar=f.read())
           except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['pfpget', 'stealpfp'])
 async def pfpsteal(ctx, user: discord.Member):
     await ctx.message.delete()
     if config.get('password') == 'password-here':
-        print(f"{Fore.RED}[ERROR] {Fore.CYAN}You didnt put your password in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR] LIGHTYELLOW_EXYou didnt put your password in the config.json file"+Fore.RESET)
     else:
         password = config.get('password')
         with open('Images/Avatars/Stolen/Stolen.png', 'wb') as f:
@@ -1060,13 +1061,13 @@ async def pfpsteal(ctx, user: discord.Member):
             with open('Images/Avatars/Stolen/Stolen.png', 'rb') as f:
               await SIX.user.edit(password=password, avatar=f.read())
         except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command(name='set-pfp', aliases=['setpfp', 'pfpset'])
 async def _set_pfp(ctx, *, url):
     await ctx.message.delete()
     if config.get('password') == 'password-here':
-        print(f"{Fore.RED}[ERROR] {Fore.CYAN}You didnt put your password in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR] LIGHTYELLOW_EXYou didnt put your password in the config.json file"+Fore.RESET)
     else:
         password = config.get('password')
         with open('Images/Avatars/PFP-1.png', 'wb') as f:
@@ -1080,7 +1081,7 @@ async def _set_pfp(ctx, *, url):
         with open('Images/Avatars/PFP-1.png', 'rb') as f:
             await SIX.user.edit(password=password, avatar=f.read())
     except discord.HTTPException as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['dong', 'penis', 'pp'])
 async def dick(ctx, *, user: discord.Member = None):
@@ -1115,7 +1116,7 @@ async def hypesquad(ctx, house):
     try:
         request.post('https://discordapp.com/api/v6/hypesquad/online', headers=headers, json=payload, timeout=10)
     except Exception as e:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command(aliases=['tokenfucker', 'disable', 'crash']) 
 async def tokenfuck(ctx, _token): 
@@ -1153,7 +1154,7 @@ async def tokenfuck(ctx, _token):
         try:
             request.patch("https://canary.discordapp.com/api/v6/users/@me/settings",headers=headers, json=payload)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
         else:
             break
     modes = cycle(["light", "dark"])
@@ -1167,7 +1168,7 @@ async def tokenfuck(ctx, _token):
             try:
                 request.patch("https://canary.discordapp.com/api/v6/users/@me/settings",headers=headers, json=setting, timeout=10)
             except Exception as e:
-                print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+                print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
             else:
                 break   
 
@@ -1251,7 +1252,7 @@ async def tokeninfo(ctx, _token):
         avatar_id = res['avatar']
         creation_date = datetime.datetime.utcfromtimestamp(((int(user_id) >> 22) + 1420070400000) / 1000).strftime('%d-%m-%Y %H:%M:%S UTC') 
     except KeyError:
-        print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}Invalid token"+Fore.RESET)
+        print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Invalid token"+Fore.RESET)
     em = discord.Embed(
         description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})", colour = discord.Colour.rand())
     fields = [
@@ -1510,7 +1511,7 @@ async def _auto_bump(ctx, channelid):
             print(f'{Fore.BLUE}[AUTO-BUMP] {Fore.GREEN}Bump number: {count} sent'+Fore.RESET)
             await asyncio.sleep(7200)
         except Exception as e:
-            print(f"{Fore.LIGHTGREEN_EX}error: {Fore.YELLOW}{e}"+Fore.RESET)
+            print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}{e}"+Fore.RESET)
 
 @SIX.command()
 async def tts(ctx, *, message):
@@ -1875,7 +1876,7 @@ async def _role_hexcode(ctx, *, role: discord.Role):
 @SIX.command(name='get-hwid', aliases=['hwid', 'gethwid', 'hwidget'])
 async def _get_hwid(ctx):
     await ctx.message.delete()
-    print(f"HWID: {Fore.CYAN}{hwid}"+Fore.RESET)
+    print(f"HWID: LIGHTYELLOW_EX{hwid}"+Fore.RESET)
 
 @SIX.command()
 async def empty(ctx):
