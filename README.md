@@ -7,3 +7,5 @@
 ask me for more details on it cord:1₆ᵢₓ#6666
 
 if you know how to install requirements.txt then you are one step ahead of everyone else! Congrats!
+
+big time credit to coats.#1337 and fweak
