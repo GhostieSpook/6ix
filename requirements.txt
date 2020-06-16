@@ -11,17 +11,3 @@ gtts
 dnspython
 image
 
-make sure you have them all downloaded
-
-
-big time credit to xanthe.#1337 and fweak
-
-
-
-
-for the colour error 
-    @classmethod
-    def rand(cls):
-        randcolor = discord.Color(random.randint(0x000000, 0xFFFFFF))
-        return randcolor  
-        'make sure u watch the video though'
