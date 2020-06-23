@@ -707,10 +707,22 @@ async def fun(ctx):
     em.add_field(name="`slot`",value="Play slot machine in the discord chat",inline=False)
     em.add_field(name="`topic`",value="Start a random topic to keep the chat going",inline=False)
     em.add_field(name="`wyr`",value="Start a 'what would you rather' topic in the chat",inline=False)
+    em.add_field(name="`hack`",value="ping the user and troll them",inline=False)
+    em.add_field(name="`wizz`",value="say it in servers and troll them",inline=False)
     em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
     em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     await ctx.send(embed=em)
+	
+@SIX.command()
+async def wizz(ctx):
+    await ctx.message.delete()
+    PORN = ["`give me 3 seconds cuz i gotta nut and fuck up`"+ctx.guild.name,"`Deleting this server shitty Roles...\n`",  "`Deleting this server shitty Roles...\nDeleting this server Text Channels...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\nInitializing Mass-DM Advertise...`"]
+    message = await ctx.send(PORN[0])
+    await asyncio.sleep(2)
+    for _next in PORN[1:]:
+        await message.edit(content=_next)
+        await asyncio.sleep(2)
 @SIX.command()
 async def util(ctx):
     await ctx.message.delete()
@@ -1452,7 +1464,15 @@ async def rainbow(ctx, *, role):
             await asyncio.sleep(10)
         except:
             break
-
+@SIX.command()
+async def wizz(ctx):
+    await ctx.message.delete()
+    PORN = ["`give me 3 seconds cuz i gotta nut and fuck up`"+ctx.guild.name,"`Deleting this server shitty Roles...\n`",  "`Deleting this server shitty Roles...\nDeleting this server Text Channels...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\nInitializing Mass-DM Advertise...`"]
+    message = await ctx.send(PORN[0])
+    await asyncio.sleep(2)
+    for _next in PORN[1:]:
+        await message.edit(content=_next)
+        await asyncio.sleep(2)
 
 @SIX.command(name='8ball')
 async def _ball(ctx, *, question):
