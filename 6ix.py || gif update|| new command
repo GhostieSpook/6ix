@@ -1,5 +1,5 @@
 class SELFBOT():
-    __linecount__ = 1933
+    __linecount__ = 1949
     __version__ = 3
     
 
@@ -662,6 +662,9 @@ async def gifs(ctx):
     em.add_field(name="`smug`",value="kinda weird I don't use it personally.",inline=False)
     em.add_field(name="`pat`",value="Pat em cuz dey good",inline=False)
     em.add_field(name="`kiss`",value="issa kith duh..",inline=False)
+    em.add_field(name="`cum`",value="cum inside them OwO",inline=False)
+    em.add_field(name="`cuddle`",value="cuddle with ur fav person",inline=False)
+    em.add_field(name="`head`",value="give head UwU",inline=False)
     em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
     em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
@@ -683,7 +686,7 @@ async def amc(ctx):
     em.add_field(name="`setG`",value="add a playing status",inline=False)
     em.add_field(name="`setL`",value="add a listening status",inline=False)
     em.add_field(name="`setW`",value="add a watching status",inline=False)
-    em.add_field(name="`masscon`",value="Add a big amount of connections to your profile ie: !masscon skype 5 6IX",inline=False)
+    em.add_field(name="`soff`",value="turns off status",inline=False)
     em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
     em.set_footer(text="by Pix <3")
     em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
@@ -1626,7 +1629,24 @@ async def ascii(ctx, *, text):
     if len('```'+r+'```') > 2000:
         return
     await ctx.send(f"```{r}```")
+		   
 
+@SIX.command()
+async def cuddle(ctx, user: discord.Member):
+    await ctx.message.delete()
+    r = requests.get("https://nekos.life/api/v2/img/cuddle")
+    res = r.json()
+    em = discord.Embed(description=SIX.user.name+' *cuddling with*  '+ user.mention, colour = discord.Colour.rand())
+    em.set_image(url=res['url'])
+    await ctx.send(embed=em)
+@SIX.command()
+async def head(ctx, user: discord.Member):
+    await ctx.message.delete()
+    r = requests.get("https://nekos.life/api/v2/img/kiss")
+    res = r.json()
+    em = discord.Embed(description=SIX.user.name+' *is giving* '+ user.mention+' *head* ', colour = discord.Colour.rand())
+    em.set_image(url=res['url'])
+    await ctx.send(embed=em)
 @SIX.command()
 async def anal(ctx, user: discord.Member):
     await ctx.message.delete()
@@ -1635,8 +1655,14 @@ async def anal(ctx, user: discord.Member):
     em = discord.Embed(description=SIX.user.name+' *did anal with* '+user.mention, colour = discord.Colour.rand())   
     em.set_image(url=res['url'])
     await ctx.send(embed=em)   
-
-
+@SIX.command()
+async def cum(ctx, user: discord.Member):
+    await ctx.message.delete()
+    r = requests.get("https://nekos.life/api/v2/img/cum")
+    res = r.json()
+    em = discord.Embed(description=SIX.user.name+' *busted a nut inside* '+ user.mention, colour = discord.Colour.rand())
+    em.set_image(url=res['url'])
+    await ctx.send(embed=em)
 @SIX.command()
 async def poke(ctx, user: discord.Member):
     await ctx.message.delete()
@@ -1917,6 +1943,9 @@ async def nitro(ctx):
 async def _gmail_bomb(ctx):
     await ctx.message.delete()
     GmailBomber()
-
+@SIX.command(name='soff', aliases=['status-off', 'Soff'])
+async def statusoff(ctx):
+    await SIX.change_presence(status=discord.Status.online)
+    await ctx.message.delete()
 if __name__ == '__main__':
 	Init()
