@@ -6,7 +6,7 @@
     𝓢𝒊𝒍𝒉𝞸𝞾𝙚𝒕𝒕𝙚 𝓑𝙧𝙖𝙥𝙡𝙚#7777 - another skid....
       
 # INFO
-ask me for more details on it cord:1₆ᵢₓ#6666
+ask me for more details on it cord:1₆ᵢₓ#1337
 
 if you know how to install requirements.txt then you are one step ahead of everyone else! Congrats!
 
