@@ -5,7 +5,7 @@
     $Y#8300 put his name on it plus it's exe don't download it. -> https://github.com/2ksyrus/6IX-SELFBOT
     𝓢𝒊𝒍𝒉𝞸𝞾𝙚𝒕𝒕𝙚 𝓑𝙧𝙖𝙥𝙡𝙚#7777 - another skid....
 # Updates
-     I fixed the colour error now can freely run the bot
+     I fixed the colour error now can you freely run the bot
 
 
 # INFO
