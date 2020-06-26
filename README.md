@@ -1,5 +1,5 @@
-# 6ix selfbot source code  
- 
+# 6ix selfbot
+ ![Screenshot](screenshot.png)
 # SKIDS
     Any nigga with lie in his name ->  https://github.com/Pixxth/Lie-selfbot-Leaked-by-pix
     $Y#8300 put his name on it plus it's exe don't download it. -> https://github.com/2ksyrus/6IX-SELFBOT
