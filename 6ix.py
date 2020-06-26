@@ -580,7 +580,7 @@ async def address(ctx, *, text):
         address_array.append(GenAddress(addy))
         i+=1
     final_str = "\n".join(address_array)
-    em = discord.Embed(description=final_str, colour = discord.Colour.rand())
+    em = discord.Embed(description=final_str, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     try:
         await ctx.send(embed=em)
     except:
@@ -589,7 +589,7 @@ async def address(ctx, *, text):
 @SIX.command()
 async def help(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.add_field(name="`ＨΞＬＰ`",value="𝐬𝐡𝐨𝐰𝐬 𝐡𝐞𝐥𝐩 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬",inline=False)
     em.add_field(name="`𝐂𝐌𝐃`",value="𝐀 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬",inline=False)
     em.add_field(name="`𝐆𝐈𝐅𝐒`",value="𝐮𝐮𝐮𝐡 𝐧𝐨𝐭 𝐟𝐨𝐫 𝐤𝐢𝐝𝐬 :) but some are ",inline=False)
@@ -605,7 +605,7 @@ async def help(ctx):
 @SIX.command()
 async def cmd(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐂𝐌𝐃")
     em.add_field(name="`𝐚𝐯`",value="Displays the profile picture of the mentioned user",inline=False)
     em.add_field(name="`𝐫𝐞𝐯𝐚𝐯`",value="Reverse avatar the mentioned user profile picture",inline=False)
@@ -647,7 +647,7 @@ async def cmd(ctx):
 @SIX.command()
 async def gifs(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐆𝐈𝐅")
     em.add_field(name="`lesbian`",value="Lesbian sex with ur fav person",inline=False)
     em.add_field(name="`head`",value="Head OwO",inline=False)
@@ -673,7 +673,7 @@ async def gifs(ctx):
 @SIX.command()
 async def amc(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐀𝐌𝐂")
     em.add_field(name="`setpfp`",value="Set the specified url as profile picture",inline=False)
     em.add_field(name="`btcstream`",value="Stream current btc price",inline=False)
@@ -695,7 +695,7 @@ async def amc(ctx):
 @SIX.command()
 async def fun(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐅𝐔𝐍")
     em.add_field(name="`fox`",value="Random fox image",inline=False)
     em.add_field(name="`dog`",value="Random dog image",inline=False)
@@ -726,7 +726,7 @@ async def wizz(ctx):
 @SIX.command()
 async def util(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐔𝐓𝐈𝐋")
     em.add_field(name="`bitly`",value="Shorten ur link using bitly [Must have bitly api key set in config.json file]",inline=False)
     em.add_field(name="`tinyurl`",value="Shorten ur link using tinyurl",inline=False)
@@ -745,7 +745,7 @@ async def util(ctx):
 @SIX.command()
 async def hacking(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐇𝐀𝐂𝐊𝐈𝐍𝐆")
     em.add_field(name="`tokeninfo`",value="Display various information about the token",inline=False)
     em.add_field(name="`tokenfuck`",value="Crash, glitch screen of a token, all in discord",inline=False)
@@ -763,7 +763,7 @@ async def hacking(ctx):
 @SIX.command()
 async def wizzing(ctx):
     await ctx.message.delete()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name="𝐖𝐈𝐙𝐙𝐈𝐍𝐆")
     em.add_field(name="`𝐒𝐈𝐗`",value="Shits on the server",inline=False)
     em.add_field(name="`𝐝𝐦𝐚𝐥𝐥`",value="10 second cooldown but u might get disabled",inline=False)
@@ -792,7 +792,7 @@ async def bitly(ctx, *, link):
                     r = await req.read()
                     r = json.loads(r) 
             new = r['data']['url']
-            em = discord.Embed(colour = discord.Colour.rand())
+            em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
             em.add_field(name='Shortened link', value=new, inline=False)
             await ctx.send(embed=em)
         except Exception as e:
@@ -845,7 +845,7 @@ async def cat(ctx):
 async def dog(ctx):
     await ctx.message.delete()
     r = requests.get("https://dog.ceo/api/breeds/image/random").json()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=str(r['message']))
     try:
         await ctx.send(embed=em)
@@ -856,7 +856,7 @@ async def dog(ctx):
 async def fox(ctx):
     await ctx.message.delete()
     r = requests.get('https://randomfox.ca/floof/').json()
-    em = discord.Embed(title="Random fox image", colour = discord.Colour.rand())
+    em = discord.Embed(title="Random fox image", color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=r["image"])
     try:
         await ctx.send(embed=em)
@@ -895,7 +895,7 @@ async def _ebay_view(ctx, url, views: int):
             requests.get(url, headers=headers)
     EbayViewer(url, views)
     elapsed_time = datetime.datetime.now() - start_time
-    em = discord.Embed(title='Ebay View Bot', colour = discord.Colour.rand())
+    em = discord.Embed(title='Ebay View Bot', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.add_field(name='Views sent', value=views, inline=False)
     em.add_field(name='Elapsed time', value=elapsed_time, inline=False)
     await ctx.send(embed=em)
@@ -905,7 +905,7 @@ async def geoip(ctx, *, ipaddr: str = '1.3.3.7'):
     await ctx.message.delete()
     r = requests.get(f'http://extreme-ip-lookup.com/json/{ipaddr}')
     geo = r.json()
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     fields = [
         {'name': 'IP', 'value': geo['query']},
         {'name': 'ipType', 'value': geo['ipType']},
@@ -947,7 +947,7 @@ async def tweet(ctx, username: str, *, message: str):
     async with aiohttp.ClientSession() as cs:
         async with cs.get(f"https://nekobot.xyz/api/imagegen?type=tweet&username={username}&text={message}") as r:
             res = await r.json()
-            em = discord.Embed(colour = discord.Colour.rand())
+            em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
             em.set_image(url=res["message"])
             await ctx.send(embed=em)
 
@@ -965,7 +965,7 @@ async def revav(ctx, user: discord.Member=None):
 @SIX.command(aliases=['pfp', 'avatar'])
 async def av(ctx, *, user: discord.Member = None):
     await ctx.message.delete()
-    em = discord.Embed(author=user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(author=user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name=str(user)+"'s pfp")
     em.set_image(url=user.avatar_url)
     await ctx.send(embed=em)
@@ -1004,7 +1004,7 @@ async def whois(ctx, *, user: discord.Member = None):
     if user is None:
         user = ctx.author      
     date_format = "%a, %d %b %Y %I:%M %p"
-    em = discord.Embed(description=user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name=str(user), icon_url=user.avatar_url)
     em.set_thumbnail(url=user.avatar_url)
     em.add_field(name="Joined", value=user.joined_at.strftime(date_format))
@@ -1025,7 +1025,7 @@ async def combine(ctx, name1, name2):
     name1letters = name1[:round(len(name1) / 2)]
     name2letters = name2[round(len(name2) / 2):]
     ship = "".join([name1letters, name2letters])
-    emb = (discord.Embed(description=f"{ship}", colour = discord.Colour.rand()))
+    emb = (discord.Embed(description=f"{ship}", color= discord.Color(random.randint(0x000000, 0xFFFFFF))))
     emb.set_author(name=f"{name1} + {name2}")
     await ctx.send(embed=emb)       
 
@@ -1107,7 +1107,7 @@ async def dick(ctx, *, user: discord.Member = None):
     dong = ""
     for _i in range(0, size):
         dong += "="
-    em = discord.Embed(title=f"{user}'s Dick size", description=f"8{dong}D", colour = discord.Colour.rand())
+    em = discord.Embed(title=f"{user}'s Dick size", description=f"8{dong}D", color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     await ctx.send(embed=em)
 
 @SIX.command(aliases=['changehypesquad'])
@@ -1269,7 +1269,7 @@ async def tokeninfo(ctx, _token):
     except KeyError:
         print(f"{Fore.RED}error: {Fore.LIGHTYELLOW_EX}Invalid token"+Fore.RESET)
     em = discord.Embed(
-        description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})", colour = discord.Colour.rand())
+        description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})", color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     fields = [
         {'name': 'Phone', 'value': res['phone']},
         {'name': 'Flags', 'value': res['flags']},
@@ -1450,7 +1450,7 @@ async def _get_color(ctx, *, color: discord.Colour):
 async def tinyurl(ctx, *, link):
     await ctx.message.delete()
     r = requests.get(f'http://tinyurl.com/api-create.php?url={link}').text
-    em = discord.Embed(colour = discord.Colour.rand())
+    em = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.add_field(name='Shortened link', value=r, inline=False )
     await ctx.send(embed=em)
 
@@ -1487,7 +1487,7 @@ async def _ball(ctx, *, question):
 	  'There is a good chance'
     ]
     answer = random.choice(responses)
-    embed = discord.Embed(colour = discord.Colour.rand())
+    embed = discord.Embed(color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     embed.add_field(name="Question", value=question, inline=False)
     embed.add_field(name="Answer", value=answer, inline=False)
     embed.set_thumbnail(url="https://www.horoscope.com/images-US/games/game-magic-8-ball-no-text.png")
@@ -1503,11 +1503,11 @@ async def slot(ctx):
     c = random.choice(emojis)
     slotmachine = f"**[ {a} {b} {c} ]\n{ctx.author.name}**,"
     if (a == b == c):
-        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} All matchings, you won!"}), colour = discord.Colour.rand())
+        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} All matchings, you won!"}), color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     elif (a == b) or (a == c) or (b == c):
-        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} 2 in a row, you won!"}), colour = discord.Colour.rand())
+        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} 2 in a row, you won!"}), color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     else:
-        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} No match, you lost"}), colour = discord.Colour.rand())
+        await ctx.send(embed=discord.Embed.from_dict({"title":"Slot machine", "description":f"{slotmachine} No match, you lost"}), color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
 
 
 
@@ -1551,7 +1551,7 @@ async def upper(ctx, *, message):
 @SIX.command(aliases=['guildpfp'])
 async def guildicon(ctx):
     await ctx.message.delete()
-    em = discord.Embed(title=ctx.guild.name, colour = discord.Colour.rand())
+    em = discord.Embed(title=ctx.guild.name, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=ctx.guild.icon_url)
     await ctx.send(embed=em)
 
@@ -1573,7 +1573,7 @@ async def _first_message(ctx, channel: discord.TextChannel = None):
     if channel is None:
         channel = ctx.channel
     first_message = (await channel.history(limit=1, oldest_first=True).flatten())[0]
-    embed = discord.Embed(description=first_message.content, colour = discord.Colour.rand())
+    embed = discord.Embed(description=first_message.content, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     embed.add_field(name="First Message", value=f"[Jump]({first_message.jump_url})")
     await ctx.send(embed=embed)
 
@@ -1602,7 +1602,7 @@ async def btc(ctx):
     r = r.json()
     usd = r['USD']
     eur = r['EUR']
-    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`', colour = discord.Colour.rand())
+    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name='Bitcoin', icon_url='https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png')
     await ctx.send(embed=em)
 
@@ -1613,7 +1613,7 @@ async def eth(ctx):
     r = r.json()
     usd = r['USD']
     eur = r['EUR']
-    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`', colour = discord.Colour.rand())
+    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_author(name='Ethereum', icon_url='https://cdn.discordapp.com/attachments/271256875205525504/374282740218200064/2000px-Ethereum_logo.png')
     await ctx.send(embed=em)
 
@@ -1633,7 +1633,7 @@ async def wyr(ctx):
     qa = soup.find(id='qa').text
     qor = soup.find(id='qor').text
     qb = soup.find(id='qb').text
-    em = discord.Embed(description=f'{qa}\n{qor}\n{qb}', colour = discord.Colour.rand())
+    em = discord.Embed(description=f'{qa}\n{qor}\n{qb}', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -1656,7 +1656,7 @@ async def cuddle(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/cuddle")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *cuddling with*  '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *cuddling with*  '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 @SIX.command()
@@ -1664,7 +1664,7 @@ async def head(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/kiss")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *is giving* '+ user.mention+' *head* ', colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *is giving* '+ user.mention+' *head* ', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 @SIX.command()
@@ -1672,7 +1672,7 @@ async def anal(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/anal")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *did anal with* '+user.mention, colour = discord.Colour.rand())   
+    em = discord.Embed(description=SIX.user.name+' *did anal with* '+user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))   
     em.set_image(url=res['url'])
     await ctx.send(embed=em)   
 @SIX.command()
@@ -1680,7 +1680,7 @@ async def cum(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/cum")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *busted a nut inside* '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *busted a nut inside* '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 @SIX.command()
@@ -1688,7 +1688,7 @@ async def poke(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/poke")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *wants attention* '+user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *wants attention* '+user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1697,7 +1697,7 @@ async def fuck(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *fucked* '+user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *fucked* '+user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)   
 
@@ -1706,7 +1706,7 @@ async def boobs(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/boobs")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *is playing with* '+user.mention+ ' *boobs*', colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *is playing with* '+user.mention+ ' *boobs*', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1716,7 +1716,7 @@ async def head(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/blowjob")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *gave* '+ user.mention + ' *head*', colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *gave* '+ user.mention + ' *head*', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
   
@@ -1726,7 +1726,7 @@ async def lesbian(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/les")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *and* '+ user.mention + ' *are having lesbian sex*', colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *and* '+ user.mention + ' *are having lesbian sex*', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1735,7 +1735,7 @@ async def feed(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/feed")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *is feeding*  '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *is feeding*  '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1744,7 +1744,7 @@ async def tickle(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/tickle")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *tickling*  '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *tickling*  '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1753,7 +1753,7 @@ async def slap(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/slap")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *slapped*  '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *slapped*  '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1762,7 +1762,7 @@ async def hug(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/hug")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *hugged* '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *hugged* '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1771,7 +1771,7 @@ async def smug(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/smug")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *smugged at* '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *smugged at* '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1780,7 +1780,7 @@ async def pat(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/pat")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *just gave u a pat* '+ user.mention + ' *for being good :)*', colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *just gave u a pat* '+ user.mention + ' *for being good :)*', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
@@ -1789,7 +1789,7 @@ async def kiss(ctx, user: discord.Member):
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/kiss")
     res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *gave u a smooch* '+ user.mention, colour = discord.Colour.rand())
+    em = discord.Embed(description=SIX.user.name+' *gave u a smooch* '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 
