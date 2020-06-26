@@ -8,6 +8,6 @@
 # INFO
 ask me for more details on it cord:1₆ᵢₓ#1337
 
-if you know how to install requirements.txt then you are one step ahead of everyone else! Congrats!
+there shouldn't be anymore colour errors!!!
 
 big time credit to coats.#1337 and fweak
