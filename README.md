@@ -5,7 +5,7 @@
     $Y#8300 put his name on it plus it's exe don't download it. -> https://github.com/2ksyrus/6IX-SELFBOT
     𝓢𝒊𝒍𝒉𝞸𝞾𝙚𝒕𝒕𝙚 𝓑𝙧𝙖𝙥𝙡𝙚#7777 - another skid....
     clyd and her friend jada - they said they didn't skid, but when I asked for the file they gave me a token grabber 💀
-    mmv vert#6382 - another one 💀 dumb enough to do it on screenshare
+    mmv dropout#1886 - another one 💀 dumb enough to do it on screenshare
 # Updates
      I fixed the colour error now can you freely run the bot
 
