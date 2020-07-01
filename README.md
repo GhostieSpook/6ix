@@ -6,6 +6,7 @@
     𝓢𝒊𝒍𝒉𝞸𝞾𝙚𝒕𝒕𝙚 𝓑𝙧𝙖𝙥𝙡𝙚#7777 - another skid....
     clyd and her friend jada - they said they didn't skid, but when I asked for the file they gave me a token grabber 💀
     mmv dropout#1886 - another one 💀 dumb enough to do it on screenshare
+    2₆ᵢₓ#2222 - master skid, shows ppl what to do. but got caught lackin and ppl ss his black ass mid-skid
 # Updates
      I fixed the colour error now can you freely run the bot
 
