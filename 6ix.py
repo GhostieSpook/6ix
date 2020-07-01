@@ -73,7 +73,6 @@ def startprint():
         privnote = "Disabled"    
 
     print(f'''{Fore.RESET}
-
                                             
                                               ██████  ██▓▒██   ██▒
                                             ▒██    ▒ ▓██▒▒▒ █ █ ▒░
@@ -86,8 +85,6 @@ def startprint():
                                                 ░   ░   ░    ░  
                                           
                       
-
-
                                                   
                                 {Fore.RED}Loggin =>  {Fore.RED}{SIX.user.name}#{SIX.user.discriminator}{Fore.LIGHTYELLOW_EX}  ||{Fore.LIGHTYELLOW_EX}  {Fore.RED}ID => {Fore.RED}{SIX.user.id}   
                                 {Fore.RED}Privnote => {Fore.RED}{privnote}{Fore.LIGHTYELLOW_EX} ||  {Fore.RED}Nitro => {Fore.RED}{nitro} 
@@ -598,9 +595,9 @@ async def help(ctx):
     em.add_field(name="`𝐅𝐔𝐍`",value="𝐟𝐮𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬",inline=False)
     em.add_field(name="`𝐇𝐀𝐂𝐊𝐈𝐍𝐆`",value="𝐨𝐛𝐯 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐝𝐮𝐡 -_-",inline=False)   
     em.add_field(name="`𝐖𝐈𝐙𝐙𝐈𝐍𝐆`",value="𝐟𝐨𝐫 𝐫𝐚𝐩𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐞𝐫𝐬",inline=False)   
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def cmd(ctx):
@@ -640,9 +637,9 @@ async def cmd(ctx):
     em.add_field(name="`𝐮𝐩𝐩𝐞𝐫`",value="Make your message CAPS",inline=False)
     em.add_field(name="`𝐈𝐦𝐠𝐭𝐟𝐲`",value="Use lmgtfy search engine to look-up something",inline=False)
     em.add_field(name="`𝐠𝐞𝐧𝐧𝐚𝐦𝐞`",value="Generate a random name based on the server members",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def gifs(ctx):
@@ -665,9 +662,9 @@ async def gifs(ctx):
     em.add_field(name="`cum`",value="cum inside them OwO",inline=False)
     em.add_field(name="`cuddle`",value="cuddle with ur fav person",inline=False)
     em.add_field(name="`head`",value="give head UwU",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -687,9 +684,9 @@ async def amc(ctx):
     em.add_field(name="`setL`",value="add a listening status",inline=False)
     em.add_field(name="`setW`",value="add a watching status",inline=False)
     em.add_field(name="`soff`",value="turns off status",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 
 @SIX.command()
@@ -709,9 +706,9 @@ async def fun(ctx):
     em.add_field(name="`wyr`",value="Start a 'what would you rather' topic in the chat",inline=False)
     em.add_field(name="`hack`",value="ping the user and troll them",inline=False)
     em.add_field(name="`wizz`",value="say it in servers and troll them",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 	
 @SIX.command()
@@ -738,9 +735,9 @@ async def util(ctx):
     em.add_field(name="`decode`",value="Decode a string from base64 to regular text",inline=False)
     em.add_field(name="`eth`",value="Display current Ethereum price",inline=False)
     em.add_field(name="`btc`",value="Display current Bitcoin price",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def hacking(ctx):
@@ -756,9 +753,9 @@ async def hacking(ctx):
     em.add_field(name="`masslogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`login`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
     em.add_field(name="`botlogin`",value="Allows you to mass-login in bot/user tokens [Choices can be: user and bot]",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 @SIX.command()
 async def wizzing(ctx):
@@ -774,9 +771,9 @@ async def wizzing(ctx):
     em.add_field(name="`𝐝𝐞𝐥𝐑`",value="Delete all the roles",inline=False)
     em.add_field(name="`𝐝𝐞𝐥𝐂`",value="Delete all the channels",inline=False)
     em.add_field(name="`𝐦𝐚𝐬𝐬𝐔𝐧`",value="Unban every member",inline=False)
-    em.set_image(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_image(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     em.set_footer(text="by Pix <3")
-    em.set_thumbnail(url="https://media.giphy.com/media/W352N3NgL8fw9LlDJs/giphy.gif")
+    em.set_thumbnail(url="https://cdn.discordapp.com/attachments/694426956359270421/727669296289022012/image0.gif")
     await ctx.send(embed=em)
 
 
@@ -1648,14 +1645,6 @@ async def cuddle(ctx, user: discord.Member):
     r = requests.get("https://nekos.life/api/v2/img/cuddle")
     res = r.json()
     em = discord.Embed(description=SIX.user.name+' *cuddling with*  '+ user.mention, color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
-    em.set_image(url=res['url'])
-    await ctx.send(embed=em)
-@SIX.command()
-async def head(ctx, user: discord.Member):
-    await ctx.message.delete()
-    r = requests.get("https://nekos.life/api/v2/img/kiss")
-    res = r.json()
-    em = discord.Embed(description=SIX.user.name+' *is giving* '+ user.mention+' *head* ', color= discord.Color(random.randint(0x000000, 0xFFFFFF)))
     em.set_image(url=res['url'])
     await ctx.send(embed=em)
 @SIX.command()
