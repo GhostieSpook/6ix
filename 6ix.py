@@ -1464,15 +1464,6 @@ async def rainbow(ctx, *, role):
             await asyncio.sleep(10)
         except:
             break
-@SIX.command()
-async def wizz(ctx):
-    await ctx.message.delete()
-    PORN = ["`give me 3 seconds cuz i gotta nut and fuck up`"+ctx.guild.name,"`Deleting this server shitty Roles...\n`",  "`Deleting this server shitty Roles...\nDeleting this server Text Channels...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\n`", "`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\n`","`Deleting this server shitty Roles...\nDeleting this server shitty Text Channels...\nDeleting this server shitty Voice Channels...\nDeleting this server shitty Categories...\nDeleting this server shitty Webhooks...\nDeleting this server shitty Emojis...\nInitiating Banwave...\nInitializing Mass-DM Advertise...`"]
-    message = await ctx.send(PORN[0])
-    await asyncio.sleep(2)
-    for _next in PORN[1:]:
-        await message.edit(content=_next)
-        await asyncio.sleep(2)
 
 @SIX.command(name='8ball')
 async def _ball(ctx, *, question):
@@ -1940,7 +1931,7 @@ async def logout(ctx):
     await SIX.logout()
 
 @SIX.command(aliases=['btc-stream', 'streambtc', 'stream-btc', 'btcstatus'])
-async def btcstream(ctx):  # b'\xfc'
+async def btcstream(ctx):
     await ctx.message.delete()   
     btc_status.start()        
 
